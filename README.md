@@ -5,13 +5,13 @@ This is a wrapper for the [bigz](https://sourceforge.net/projects/bigz/) bignum 
 # Examples
 
 ```lisp
-(import bigz)
+(import bigz/bigz :as bz)
 
 (defn fac [n]
   (if (< n 2)
-    (bigz/from-integer 1)
-    (bigz/multiply (bigz/from-integer n)
-                   (fac (- n 1)))))
+    (bz/from-integer 1)
+    (bz/multiply (bz/from-integer n)
+                 (fac (- n 1)))))
 
 (print "fac(50) = " (fac 50))
 ```
