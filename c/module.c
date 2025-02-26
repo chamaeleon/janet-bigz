@@ -6,7 +6,6 @@
 static int bigz_gc(BigZ *p, size_t s)
 {
     free(*p);
-    free(p);
     return 0;
 }
 
